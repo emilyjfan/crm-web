@@ -8,11 +8,13 @@
 	
 	<h1>All Contacts</h1>
 
-	<ul>
+	<ol>
 	<% $rolodex.contacts.each do |contact| %>
-			<li><%= contact.first_name %> <%= contact.last_name %></li>
+			<li>First Name: <%= contact.first_name %> Last Name: <%= contact.last_name %> Email: <%= contact.email %> Note: <%= contact.note %></li>
 	<% end %>
-	</ul>
+	</ol>
 
+
+	<a href="/">Back to Main Menu</a>
 </body>
 </html>
