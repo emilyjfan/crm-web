@@ -1,0 +1,62 @@
+body {
+	font-family: "Suranna";
+	text-align: center;
+	height: 100%;
+	position: relative;
+}
+
+a {
+	padding: 10px 15px;
+	width: 100px;
+}
+
+table {
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th,
+td {
+	border-bottom: 1px solid #cecfd5;
+	padding: 10px 15px;
+	width: 100px;
+}
+
+tfoot tr:last-child td {
+  	border-bottom: 0;
+}
+
+label {
+	display: block;
+	margin-left: auto;
+	margin-right: 500px;
+	text-align: right;
+
+}
+
+input {
+	margin-left: 50px;
+	margin-top: 30px;
+	margin-bottom: auto;
+	width: 300px;
+	border-radius: 5px;
+}
+
+.note {
+	height: 200px;
+}
+
+.submit_button {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100px;
+	margin-bottom: 200px;
+}
+
+
+footer {
+	position: fixed;
+	bottom: 10px;
+	width: 100%;
+}

@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
-	
-	<h1>All Contacts</h1>
+<h1>All Contacts</h1>
 
-	<ol>
-	<% $rolodex.contacts.each do |contact| %>
-			<li><strong>First Name:</strong> <%= contact.first_name %> <strong>	Last Name: </strong> <%= contact.last_name %> <strong> Email: </strong> <%= contact.email %> <strong>Note: </strong> <%= contact.note %></li>
-	<% end %>
-	</ol>
-
-
-	<a href="/">Back to Main Menu</a>
-</body>
-</html>
+<table>
+  <tr class="table-heading">
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Note</th>
+  </tr>
+<% $rolodex.contacts.each do |contact| %>
+  <tr>
+    <td><%= contact.first_name %> </td>
+    <td><%= contact.last_name %> </td>
+    <td><%= contact.email %></td>
+    <td><%= contact.note %></td>
+  </tr>
+<% end %>
+ </table>

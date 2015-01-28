@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
+	<title> <%= @crm_app_name%> </title>
+	   <link rel="stylesheet" type="text/css" href="/normalize.css">
+	  <link rel="stylesheet" type="text/css" href="/style.css">
+	 <link href='http://fonts.googleapis.com/css?family=Suranna' rel='stylesheet' type='text/css'></head>
 <body>
+	<header>
+		
+		<h1> Welcome to <%=@crm_app_name%>!</h1>
+
+		<a href="/">Home</a>
+		<a href="/contacts">View All Contacts</a>
+		<a href="/contacts/new">Add A Contact</a>
+
+	</header>
+	<nav></nav>
+
 	<%= yield %>
+	<footer>
+	Emily Fan &copy;
+	</footer>
 </body>
 </html>
