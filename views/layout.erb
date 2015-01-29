@@ -5,22 +5,25 @@
 	<title> <%= @crm_app_name%> </title>
 	   <link rel="stylesheet" type="text/css" href="/normalize.css">
 	  <link rel="stylesheet" type="text/css" href="/style.css">
-	 <link href='http://fonts.googleapis.com/css?family=Suranna' rel='stylesheet' type='text/css'></head>
+	  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	 <link href='http://fonts.googleapis.com/css?family=NTR' rel='stylesheet' type='text/css'>
+	 </head>
 <body>
 	<header>
 		
-		<h1> Welcome to <%=@crm_app_name%>!</h1>
+		<h1> WELCOME TO <%=@crm_app_name%>!</h1>
 
-		<a href="/">Home</a>
-		<a href="/contacts">View All Contacts</a>
-		<a href="/contacts/new">Add A Contact</a>
+		<a href="/">HOME</a>
+		<a href="/contacts">VIEW ALL CONTACTS</a>
+		<a href="/contacts/new">ADD CONTACT</a>
 
 	</header>
 	<nav></nav>
 
 	<%= yield %>
-	<footer>
-	Emily Fan &copy;
-	</footer>
+
+	<div></div>
+
+	<footer></footer>
 </body>
 </html>

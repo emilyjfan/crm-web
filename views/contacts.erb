@@ -1,18 +1,12 @@
 <h1>All Contacts</h1>
 
-<table>
-  <tr class="table-heading">
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Email</th>
-    <th>Note</th>
-  </tr>
-<% $rolodex.contacts.each do |contact| %>
-  <tr>
-    <td><%= contact.first_name %> </td>
-    <td><%= contact.last_name %> </td>
-    <td><%= contact.email %></td>
-    <td><%= contact.note %></td>
-  </tr>
+
+ <% $rolodex.contacts.each do |contact| %>
+
+<a href="/:name"> <section class="contacts">
+    <i class="fa fa-user fa-5x"></i>
+    <p><%= contact.first_name %>
+    <%= contact.last_name %></p>
+</section>
 <% end %>
- </table>
+</a>
