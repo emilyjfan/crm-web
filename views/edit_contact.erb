@@ -1,0 +1,14 @@
+<h1>Edit A Contact</h1>
+
+<form action="/contacts/<%= @contact.id%>" method="post">
+	<label> First Name: <input type="text" name="first_name"></label>
+	  	
+  	<label> Last Name: 	<input type="text" name="last_name"></label> 
+
+	<label> Email: <input type="text" name="email"></label>
+	
+	<label> Note: <input class="note" type="text" name="note"></label>
+	  	
+	<input class="submit_button" type="submit" name="Submit">
+</form>
+

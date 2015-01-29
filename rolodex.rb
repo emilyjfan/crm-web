@@ -21,11 +21,7 @@ attr_reader :contacts
 	end
 
 	def find_contact(contact_id)
-		@contacts.each do |contact| 
-			if contact_id == contact.id
-				return contact
-			end 
-		end
+		@contacts.find{|contact| contact_id == contact.id }  
 	end
 
 	def display_all_contacts
