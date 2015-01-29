@@ -51,6 +51,15 @@ input {
 	margin: 40px;
 }
 
+.single-contact{
+	border-radius: 5px;
+	border: solid black;
+	width: 24%;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
 i {
 	color: gray;
 	margin-top: 20px;
@@ -70,5 +79,49 @@ p {
 	color: black;
 }
 
+.btn {
+	border-radius: 5px;
+	border: solid black;
+	width: 150px;
+	font-size: 20px;
+}
 
+.show-contact {
+	margin-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+	border-radius: 5px;
+	border: solid black;	
+}
 
+#delete-button {
+	float: left;
+	margin-bottom: 40px;
+	margin-left: 100px;
+}
+
+#edit-button {
+	float: right;
+	margin-right: 100px;
+	margin-bottom: 40px;
+}
+
+#notelabel{
+
+}
+
+#notetextarea{
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+.clear:before,
+.clear:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clear:after {
+    clear: both;
+}

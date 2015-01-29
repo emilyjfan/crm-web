@@ -34,8 +34,8 @@ attr_reader :contacts
 		end
 	end
 	
-	def delete_one_contact(contact_id)
-		@contacts.delete_if {|contact| contact_id == contact.id}
+	def remove_contact(contact_id)
+		@contacts.delete(contact_id)
 	end 
 
 end
