@@ -48,7 +48,11 @@ post '/contacts' do
   	redirect to('/contacts')
 end
 
-get "/contacts/:id" do
+get '/contacts/search' do 
+	erb :search_contact
+end
+
+get '/contacts/:id' do
   @contact = Contact.get(params[:id].to_i)
 	if @contact  
   		erb :show_contact
@@ -57,7 +61,7 @@ get "/contacts/:id" do
 	end 
 end
 
-get "/contacts/:id/edit" do 
+get '/contacts/:id/edit' do 
  	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		erb :edit_contact 
@@ -66,18 +70,14 @@ get "/contacts/:id/edit" do
 	end
 end
 
-put "/contacts/:id" do
-	puts
-	puts "PARAMS -> #{params}"
-	puts
-
+put '/contacts/:id' do
  	@contact = Contact.get(params[:id].to_i)
 	if @contact 
 		@contact.last_name = params[:last_name]
 		@contact.first_name = params[:first_name]
 		@contact.email = params[:email]
 		@contact.note = params[:note]
-		
+
 		@contact.save
 	
 		redirect to ("/contacts")
@@ -86,7 +86,7 @@ put "/contacts/:id" do
 	end
 end
 
-delete "/contacts/:id" do
+delete '/contacts/:id' do
  	@contact = Contact.get(params[:id].to_i)
 	if @contact
 		@contact.destroy
