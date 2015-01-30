@@ -5,11 +5,20 @@ require 'data_mapper'
 
 DataMapper.setup(:default, "sqlite3:database.sqlite3")
 
+class Contact
+	attr_accessor :id, :first_name, :ast_name, :email, :note
+
+	def initialize(first_name, last_name, email, note)
+		@first_name = first_name
+		@last_name = last_name
+		@email = email
+		@note = note 
+	end
+end
+
 $rolodex = Rolodex.new
 
 @@rolodex = Rolodex.new
-@@rolodex.new_contact(Contact.new("Johnny", "Bravo", "johnny@bitmakerlabs.com", "Rockstar"))
-
 
 @@crm_app_name = "EMILY'S CRM APP"
 
