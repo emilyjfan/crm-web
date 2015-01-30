@@ -1,0 +1,14 @@
+
+<h1>All Contacts</h1>
+
+ <% @results.each do |contact| %>
+
+<a href="/contacts/<%= contact.id %>"> <section class="contacts">
+    <i class="fa fa-user fa-5x"></i>
+    <p><%= contact.first_name %>
+    <%= contact.last_name %></p>
+	
+<p>Contact ID: <%= contact.id %></p>
+</section>
+<% end %>
+</a>

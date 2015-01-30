@@ -52,6 +52,31 @@ get '/contacts/search' do
 	erb :search_contact
 end
 
+
+get '/contacts/results' do 
+
+	# patterns = [:first_name, :last_name, :email, :id].map { |attribute| "%#{params[attribute]}%"  }
+	
+ 	@first_name = "%#{params[:first_name]}%" 
+  	@last_name = "%#{params[:last_name]}%" 
+ 	@email = "%#{params[:email]}%" 
+ 	@id = "%#{params[:id]}%" 
+
+ 	@results = Contact.all({
+ 		:conditions => [
+ 		"first_name LIKE ? AND last_name LIKE ? AND email LIKE ? AND id LIKE ?", 
+ 		@first_name,
+ 		@last_name,
+ 		@email,
+ 		@id
+ 		]
+ 	})
+
+	erb :search_results
+
+end
+
+
 get '/contacts/:id' do
   @contact = Contact.get(params[:id].to_i)
 	if @contact  
