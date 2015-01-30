@@ -67,12 +67,17 @@ get "/contacts/:id/edit" do
 end
 
 put "/contacts/:id" do
+	puts
+	puts "PARAMS -> #{params}"
+	puts
+
  	@contact = Contact.get(params[:id].to_i)
 	if @contact 
-		@contact.first_name = params[:first_name],
-		@contact.last_name = params[:last_name],
-		@contact.email = params[:email],
-		@contact.note = params[:note],
+		@contact.last_name = params[:last_name]
+		@contact.first_name = params[:first_name]
+		@contact.email = params[:email]
+		@contact.note = params[:note]
+		
 		@contact.save
 	
 		redirect to ("/contacts")
